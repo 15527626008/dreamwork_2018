@@ -34,12 +34,12 @@ class BreadcrumbCustom extends React.Component {
             (t.type === color && (t.checked = !t.checked)) || (t.checked = false);
             return t;
         })
+        
     }
     themeChange = (v) => {
 
         this.resetThemeColor(v.type);
-        this.props.dispatch(changeThemeColor(v.type))
-        
+        v.type === this.props.color ? this.props.dispatch(changeThemeColor('')):this.props.dispatch(changeThemeColor(v.type))
     };
     render() {
 

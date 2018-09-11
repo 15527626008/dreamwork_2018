@@ -1,0 +1,4 @@
+{
+	"appenders": { "cheese": { "type": "file", "filename": "worker_cheese.log" } },
+	"categories": { "default": { "appenders": ["cheese"], "level": "error" } }
+}

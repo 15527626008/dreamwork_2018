@@ -1,18 +1,26 @@
 let express     = require('express');
 let path        = require('path');
 let favicon     = require('serve-favicon');
-let logger      = require('morgan');
+let morgan      = require('morgan');
 let cookieParer = require('cookie-parser');
 let bodyParse   = require('body-parser');
 
+let logger      = morgan('dev');
+
 var app         = express();
 var data        = require('./routes/data');
+var log4js      = require("./config/log");
 
+log4js.configure("master");
 // view engine setup
 app.set('views',path.join(__dirname,'views'));
 app.set('view engine','ejs');
 
-app.use(logger('dev'));
+app.use(log4js.useLog());
+app.use(logger);
+//记录访客信息，建议在发布版本中开启此选项
+//app.use(morgan('combined', {stream: log4js.accessLogStream}))
+
 app.use(bodyParse.json());
 app.use(bodyParse.urlencoded({extended:false}));
 app.use(cookieParer());

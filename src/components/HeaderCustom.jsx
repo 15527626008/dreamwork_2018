@@ -90,7 +90,7 @@ class HeaderCustom extends Component {
                         <Icon type="arrows-alt" onClick={this.screenFull} />
                     </Menu.Item> */}
                     
-                    <Menu.Item key="1">
+                    {/* <Menu.Item key="1">
                         <Badge count={25} overflowCount={10} style={{marginLeft: 10}}>
                             <Icon type="notification" />
                         </Badge>
@@ -105,7 +105,7 @@ class HeaderCustom extends Component {
                             <Menu.Item key="setting:3">个人设置</Menu.Item>
                             <Menu.Item key="setting:4">系统设置</Menu.Item>
                         </MenuItemGroup>
-                    </SubMenu>
+                    </SubMenu> */}
                 </Menu>
                 <style>{`
                     .ant-menu-submenu-horizontal > .ant-menu {

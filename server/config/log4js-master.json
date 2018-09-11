@@ -1,0 +1,12 @@
+{
+    "appenders": {
+        "cheeseLogs": { "type": "file", "filename": "./logs/cheese.log" ,"pattern":"-yyyy-MM-dd","alwaysIncludePattern":true,"pollInterval":1},
+        "console": { "type": "console" }
+      },
+     "categories": {
+        "cheese": { "appenders": ["cheeseLogs"], "level": "error" },
+        "another": { "appenders": ["console"], "level": "info" },
+        "default": { "appenders": ["console", "cheeseLogs"], "level": "info" }
+    }
+}
+
