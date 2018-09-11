@@ -200,7 +200,7 @@ class Tools extends React.Component{
         // </Tag>
         const container = dataBase?<TimelineCustom data={dataBase}/>:'';
         //显示历史记录
-        const expressHistory = Object.keys(this.state.express).reverse().map(key=>(
+        const expressHistory = this.state.express?Object.keys(this.state.express).reverse().map(key=>(
             <Col span="8" key={uuidWithRandom()}>
                 <Card style={{height:'192px'}}>
                     <div className="pb-m">
@@ -218,7 +218,7 @@ class Tools extends React.Component{
                     </Spin>
                 </Card>
             </Col>
-        ))
+        )):'';
         
         return(
             <Layout>
