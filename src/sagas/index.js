@@ -133,14 +133,14 @@ function* watchLoadMoreStargazers() {
 
 function* watchLoadExpressInfos(){
   while(true){
-    const {express} = yield take(actions.EXPRESS_INFO_CHANGE)
+    yield take(actions.EXPRESS_INFO_CHANGE)
     
   }
 }
 
 function* watchThemeChange(){
   while(true){
-    const {color} = yield take(actions.CHANGE_THEME)
+    yield take(actions.CHANGE_THEME)
    
   }
 }

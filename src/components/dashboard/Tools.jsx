@@ -180,12 +180,16 @@ class Tools extends React.Component{
 
         this.setState({express},this.doPost(requestData,express[key].ShipperName))
     }
+    getRandomNum = (length)=>{
+       
+       return ColorArr[randomNum(length)];
+    }
     render(){
     
         // Only show error after a field is touched.
-       
+        let length = ColorArr.length;
         const tagElem = expressCompany.commonly_used.map(item=>(
-            <Tag style={{margin:15,fontSize:13}} color={ColorArr[randomNum(ColorArr.length)]} key={item.EN} onClick={()=>this.handleChange(item)}>
+            <Tag style={{margin:15,fontSize:13}} color={this.getRandomNum(length)} key={item.EN} onClick={()=>this.handleChange(item)}>
                 {checkCharacter(item.CN)?item.CN:item.EN+item.CN}
             </Tag>
         

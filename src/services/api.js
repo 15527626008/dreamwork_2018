@@ -49,7 +49,7 @@ function callApi(endpoint, schema) {
 
 }
 
-function callApiByJsonp(endpoint,data){
+function callApiByJsonp(endpoint){
     
   const fullUrl = (endpoint.indexOf(API_ROOT) === -1) ? API_ROOT + endpoint : endpoint
 

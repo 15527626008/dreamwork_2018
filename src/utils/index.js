@@ -8,7 +8,7 @@ export const queryString = () => {
     let _queryString = {};
     const _query = window.location.search.substr(1);
     const _vars = _query.split('&');
-    _vars.forEach((v, i) => {
+    _vars.forEach((v) => {
         const _pair = v.split('=');
         if (!_queryString.hasOwnProperty(_pair[0])) {
             _queryString[_pair[0]] = decodeURIComponent(_pair[1]);
@@ -84,18 +84,9 @@ export const uuidWithRandom = ()=> {
     return uuid;
 }
 
-export const randomNum = (minNum,maxNum) => { 
-    switch(arguments.length){ 
-        case 1: 
-            return parseInt(Math.random()*minNum,10); 
-        break; 
-        case 2: 
-            return parseInt(Math.random()*(maxNum-minNum)+minNum,10); 
-        break; 
-            default: 
-                return 0; 
-            break; 
-    } 
+export const randomNum = (num) => { 
+    
+    return parseInt(Math.random()*num)
 } 
 export const checkCharacter = (value) => {
     var Regx = /[A-Za-z]/i;

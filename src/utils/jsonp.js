@@ -1,5 +1,5 @@
 let jsonp = jsonp || {};
-;(function () {
+(function () {
     /**
      * JSONP操作
      * @param url : 请求的url

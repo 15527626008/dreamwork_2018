@@ -8,7 +8,6 @@ import rootSaga from './sagas'
 import { AppContainer } from 'react-hot-loader';
 import { PersistGate } from 'redux-persist/integration/react'
 import './index.css';
-import registerServiceWorker from './registerServiceWorker';
 import Page from './Page';
 
 
@@ -49,5 +48,3 @@ if (module.hot) {
         render(Page);
     })
 }
-
-registerServiceWorker();
